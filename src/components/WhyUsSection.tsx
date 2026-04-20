@@ -90,7 +90,7 @@ export default function WhyUsSection() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663469115047/VsguVjSguDvHcp4aMTBWqT/jl-insurance-service-Q4PAypgtb2jNZmTmfDDcqB.webp"
+                  src="/images/Infotablet.jpeg"
                   alt="Equipo de JL Solution atendiendo clientes"
                   className="w-full h-96 object-cover"
                 />

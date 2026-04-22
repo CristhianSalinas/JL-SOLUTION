@@ -1,13 +1,12 @@
 /*
  * JL Solution — Design System
- * Philosophy: "Confianza Profesional" — Moderno y fresco en azul claro con blanco
- * Colors: Navy Blue (#0D2B4E) + Light Blue (#7DB8FF) + White (#FFFFFF)
+ * Colors: Navy Blue + Light Blue (#7db8ff) + White
  * Fonts: Montserrat (display) + Source Sans 3 (body)
- * Layout: Asymmetric with diagonal section cuts
  */
 
 @import "tailwindcss";
-@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-jl-navy: oklch(0.22 0.07 245);
@@ -18,11 +17,9 @@
   --color-jl-orange-light: #c4e0ff;
   --color-jl-cream: #ffffff;
   --color-jl-cream-dark: #f5fbff;
-  --font-sans: "Source Sans 3", sans-serif;
-  --font-montserrat: "Montserrat", sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-source-sans: 'Source Sans 3', sans-serif;
 }
-
-@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -64,8 +61,7 @@
 }
 
 :root {
-  /* JL Solution Brand Colors */
-  --jl-navy: oklch(40.879% 0.13587 255.271);
+  --jl-navy: oklch(0.22 0.07 245);
   --jl-navy-dark: oklch(0.15 0.06 245);
   --jl-navy-light: oklch(0.32 0.07 245);
   --jl-orange: #7db8ff;
@@ -119,12 +115,7 @@
     font-family: 'Source Sans 3', sans-serif;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -169,171 +160,139 @@
       max-width: 1280px;
     }
   }
+}
 
-  /* JL Solution Custom Components */
-  .jl-btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-jl-orange text-white font-bold font-montserrat transition-all duration-300 no-underline hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,_0,_0,_0.2)];
-  }
+/* ── JL Solution Design System — plain CSS (Tailwind v4 compatible) ── */
 
+.jl-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  background-color: #7db8ff;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 300ms;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.jl-btn-primary:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.jl-section-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  font-family: 'Montserrat', sans-serif;
+}
+@media (min-width: 768px) {
   .jl-section-title {
-    @apply text-4xl md:text-5xl font-black text-gray-900 font-montserrat;
+    font-size: 3rem;
+    line-height: 1;
   }
+}
 
-  .service-card {
-    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)];
-  }
+.service-card {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid #7db8ff;
+  background-color: #f9f7f4;
+  transition: all 300ms;
+}
+.service-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
 
-  .navbar-shadow {
-    @apply shadow-[0_4px_20px_rgba(0,_0,_0,_0.1)];
-  }
+.navbar-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-  .diagonal-section {
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
-    margin-top: -3rem;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
 
-  .diagonal-section-reverse {
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-    margin-top: -3rem;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+@keyframes pulse-orange {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(125, 184, 255, 0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(125, 184, 255, 0); }
+}
 
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
 
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70%  { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
 
-  @keyframes pulse-orange {
+.animate-fade-in-up  { animation: fadeInUp 0.6s ease forwards; }
+.animate-fade-in-left { animation: fadeInLeft 0.6s ease forwards; }
+.pulse-cta            { animation: pulse-orange 2s infinite; }
+.wa-pulse             { animation: wa-pulse 2.2s infinite; }
 
-    0%,
-    100% {
-      box-shadow: 0 0 0 0 rgba(125, 184, 255, 0.4);
-    }
+.typewriter-cursor {
+  display: inline-block;
+  color: #7db8ff;
+  font-weight: 400;
+  animation: cursor-blink 0.75s step-end infinite;
+  margin-left: 2px;
+}
 
-    50% {
-      box-shadow: 0 0 0 12px rgba(125, 184, 255, 0);
-    }
-  }
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.delay-1 { transition-delay: 0.1s; }
+.reveal.delay-2 { transition-delay: 0.2s; }
+.reveal.delay-3 { transition-delay: 0.3s; }
+.reveal.delay-4 { transition-delay: 0.4s; }
+.reveal.delay-5 { transition-delay: 0.5s; }
+.reveal.revealed { opacity: 1; transform: translateY(0); }
 
-  .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease forwards;
-  }
-
-  .animate-fade-in-left {
-    animation: fadeInLeft 0.6s ease forwards;
-  }
-
-  .pulse-cta {
-    animation: pulse-orange 2s infinite;
-  }
-
-  /* Typewriter cursor */
-  @keyframes cursor-blink {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0; }
-  }
-  .typewriter-cursor {
-    display: inline-block;
-    color: #7db8ff;
-    font-weight: 400;
-    animation: cursor-blink 0.75s step-end infinite;
-    margin-left: 2px;
-  }
-
-  /* Scroll Reveal */
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .reveal.delay-1 {
-    transition-delay: 0.1s;
-  }
-
-  .reveal.delay-2 {
-    transition-delay: 0.2s;
-  }
-
-  .reveal.delay-3 {
-    transition-delay: 0.3s;
-  }
-
-  .reveal.delay-4 {
-    transition-delay: 0.4s;
-  }
-
-  .reveal.delay-5 {
-    transition-delay: 0.5s;
-  }
-
-  .reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Hero title highlight */
-  .hero-title span {
-    background: linear-gradient(90deg, oklch(0.72 0.19 42), oklch(0.85 0.18 55));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Stats card */
-  .stat-card {
-    @apply flex flex-col items-center justify-center p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .stat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-  }
-
-  /* WhatsApp button premium pulse */
-  @keyframes wa-pulse {
-    0% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-    }
-
-    70% {
-      box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-    }
-
-    100% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-  }
-
-  .wa-pulse {
-    animation: wa-pulse 2.2s infinite;
-  }
-
-  /* Staggered service cards */
-  .service-card {
-    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-[#f9f7f4] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)];
-  }
+.diagonal-section {
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  margin-top: -3rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.diagonal-section-reverse {
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  margin-top: -3rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }

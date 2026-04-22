@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JL SOLUTION</title>
+  <title>JL SOLUTION - DMV Express Service | Jackson Heights, NY</title>
 
   <!-- SEO & Open Graph Meta Tags -->
   <meta name="description"
-    content="JL Solution New York. Placas el mismo día, registros, transferencias, seguros de autos, hogar y salud, notario público y subastas de autos usados." />
-  <meta property="og:title" content="JL Solution - Servicios Automotrices & Seguros" />
-  <meta property="og:image"
-    content="/hero1.png" />
+    content="JL Solution New York. Placas el mismo día, registros, transferencias, seguros de autos, hogar y salud, notario público y subastas de autos usados. Jackson Heights, Queens NY." />
+  <meta property="og:title" content="JL Solution - Servicios DMV & Seguros | New York" />
+  <meta property="og:description"
+    content="Placas el mismo día, trámites DMV, seguros de auto, hogar y salud. Atención en español e inglés en Jackson Heights, NY." />
+  <meta property="og:image" content="/hero1.png" />
   <meta property="og:url" content="https://jlsolution.com/" />
   <meta property="og:type" content="website" />
 
@@ -30,7 +31,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Tailwind CSS (compiled via Vite) -->
-  <link rel="stylesheet" crossorigin href="/assets/index-DVRppbLZ.css" />
+  <link rel="stylesheet" href="/src/index.css" />
 </head>
 
 <body class="bg-white">
@@ -39,9 +40,11 @@
     <!-- Top bar (hidden on mobile) -->
     <div class="hidden md:block py-1.5 px-4 bg-jl-orange">
       <div class="max-w-6xl mx-auto flex justify-between items-center text-white text-sm">
-        
         <a href="tel:+19292403566" class="flex items-center gap-1.5 font-bold hover:underline">
           <i class="fas fa-phone text-xs"></i> Llámanos: +1 (929) 240-3566
+        </a>
+        <a href="https://wa.me/19292403566" target="_blank" class="flex items-center gap-1.5 font-bold hover:underline">
+          <i class="fab fa-whatsapp text-xs"></i> WhatsApp Directo
         </a>
       </div>
     </div>
@@ -51,7 +54,8 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <a href="#inicio" class="flex items-center gap-3" onclick="smoothScroll(event, '#inicio')">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-black text-white text-lg bg-jl-orange">
+          <div
+            class="w-10 h-10 rounded-lg flex items-center justify-center font-black text-white text-lg bg-jl-orange">
             JL</div>
           <div>
             <div class="text-white font-black text-xl font-montserrat">DMV EXPRESS SERVICE</div>
@@ -65,19 +69,24 @@
           <div class="relative group">
             <button
               class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10 flex items-center gap-1">
-              Servicios <i class="fas fa-chevron-down text-xs"></i>
+              Servicios <i class="fas fa-chevron-down text-xs ml-1"></i>
             </button>
-            <div class="hidden group-hover:block absolute left-0 mt-0 w-48 bg-white rounded shadow-lg py-2 z-10">
-              <a href="#servicios" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 font-medium">Placas el Mismo
-                Día</a>
-              <a href="#seguros" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 font-medium">Seguros de
-                Auto</a>
+            <div
+              class="hidden group-hover:block absolute left-0 mt-0 w-56 bg-white rounded-xl shadow-xl py-2 z-10 border border-gray-100">
+              <a href="#servicios" class="block px-4 py-2.5 text-gray-800 hover:bg-gray-50 font-medium text-sm"><i
+                  class="fas fa-car text-jl-orange mr-2 w-4"></i>Placas el Mismo Día</a>
+              <a href="#servicios" class="block px-4 py-2.5 text-gray-800 hover:bg-gray-50 font-medium text-sm"><i
+                  class="fas fa-car-side text-jl-orange mr-2 w-4"></i>Seguros de Auto</a>
+              <a href="#servicios" class="block px-4 py-2.5 text-gray-800 hover:bg-gray-50 font-medium text-sm"><i
+                  class="fas fa-stamp text-jl-orange mr-2 w-4"></i>Notario Público</a>
+              <a href="#servicios" class="block px-4 py-2.5 text-gray-800 hover:bg-gray-50 font-medium text-sm"><i
+                  class="fas fa-gavel text-jl-orange mr-2 w-4"></i>Subasta de Autos</a>
             </div>
           </div>
           <a href="#nosotros" onclick="smoothScroll(event, '#nosotros')"
             class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10">Nosotros</a>
           <a href="#contacto" onclick="smoothScroll(event, '#contacto')"
-            class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10">Contacto</a>
+            class="ml-2 jl-btn-primary py-2 text-sm">Contacto</a>
         </div>
 
         <!-- Mobile menu button -->
@@ -87,8 +96,9 @@
       </div>
     </div>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobileMenu" class="hidden lg:hidden flex-col bg-jl-navy px-4 pt-2 pb-4 shadow-lg border-t border-white/10">
+    <!-- Mobile menu -->
+    <div id="mobileMenu"
+      class="hidden lg:hidden flex-col bg-jl-navy px-4 pt-2 pb-4 shadow-lg border-t border-white/10">
       <a href="#inicio" onclick="smoothScroll(event, '#inicio')"
         class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Inicio</a>
       <a href="#servicios" onclick="smoothScroll(event, '#servicios')"
@@ -97,6 +107,9 @@
         class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Nosotros</a>
       <a href="#contacto" onclick="smoothScroll(event, '#contacto')"
         class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Contacto</a>
+      <a href="tel:+19292403566" class="mt-2 jl-btn-primary justify-center text-center py-2.5">
+        <i class="fas fa-phone"></i> Llamar Ahora
+      </a>
     </div>
   </nav>
 
@@ -108,7 +121,7 @@
     <!-- Dark overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-[#382345]/95 via-[#382345]/80 to-[#382345]/40"></div>
 
-    <!-- Orange accent bar -->
+    <!-- Accent bar -->
     <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-jl-orange"></div>
 
     <div class="relative max-w-6xl mx-auto px-4 z-10 w-full">
@@ -116,8 +129,8 @@
         <!-- Badge -->
         <div
           class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6 font-montserrat bg-jl-orange/20 border border-jl-orange/60 text-jl-orange-light">
-          <span class="w-2 h-2 rounded-full bg-jl-orange-light"></span>
-          
+          <span class="w-2 h-2 rounded-full bg-jl-orange-light animate-pulse"></span>
+          Servicio #1 en Jackson Heights, NY
         </div>
 
         <!-- Main heading con Typewriter -->
@@ -128,9 +141,8 @@
         </h1>
 
         <p class="text-lg md:text-xl text-white/85 mb-8 max-w-xl leading-relaxed">
-          Placas el mismo día, registros, asesorias en seguro de autos, hogar y salud, notario público y subastas de
-          autos usados.
-          Todo en un solo lugar para toda el área de New York.
+          Placas el mismo día, registros, asesorías en seguro de autos, hogar y salud, notario público y subastas de
+          autos usados. Todo en un solo lugar para toda el área de New York.
         </p>
 
         <!-- Highlights -->
@@ -149,15 +161,15 @@
           </div>
           <div class="flex items-center gap-2">
             <i class="fas fa-check-circle text-lg text-jl-orange-light"></i>
-            <span class="text-white/90 text-sm font-semibold">Curso defensivo </span>
+            <span class="text-white/90 text-sm font-semibold">Curso Defensivo</span>
           </div>
           <div class="flex items-center gap-2">
             <i class="fas fa-check-circle text-lg text-jl-orange-light"></i>
-            <span class="text-white/90 text-sm font-semibold">Prueba de Manejo DMV </span>
+            <span class="text-white/90 text-sm font-semibold">Prueba de Manejo DMV</span>
           </div>
           <div class="flex items-center gap-2">
             <i class="fas fa-check-circle text-lg text-jl-orange-light"></i>
-            <span class="text-white/90 text-sm font-semibold">Devolucion de Placas </span>
+            <span class="text-white/90 text-sm font-semibold">Devolución de Placas</span>
           </div>
         </div>
 
@@ -175,6 +187,7 @@
       </div>
     </div>
   </section>
+
   <!-- SERVICES SECTION -->
   <section id="servicios" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4">
@@ -185,7 +198,7 @@
         </p>
         <h2 class="jl-section-title mb-4">Todo Lo Que Necesitas<br>En Un Solo Lugar</h2>
         <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-          Brindamos soluciones automotrices de seguros y tramites DMV para toda la comunidad de New York.
+          Brindamos soluciones automotrices, seguros y trámites DMV para toda la comunidad de New York.
         </p>
       </div>
 
@@ -193,10 +206,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Service 1: Placas -->
         <div class="service-card border border-gray-200 reveal delay-1">
-          <div class="font-montserrat">
-            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-car"></i></div>
-            <h3 class="text-xl font-bold mb-2 font-montserrat">Placas el Mismo Día</h3>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-car text-xl text-jl-orange"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Placas el Mismo Día</h3>
           <p class="text-gray-600 text-sm mb-4">Obtén tus placas de New York el mismo día de tu visita. Proceso rápido,
             sin citas largas ni filas interminables.</p>
           <span
@@ -206,63 +219,134 @@
 
         <!-- Service 2: Registro -->
         <div class="service-card border border-gray-200 reveal delay-2">
-          <div class="font-montserrat">
-            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-file-alt"></i></div>
-            <h3 class="text-xl font-bold mb-2 font-montserrat">Registro & Transferencias</h3>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-file-alt text-xl text-jl-orange"></i>
           </div>
-          <p class="text-gray-600 text-sm mb-4">Registra tu vehículo o transfiere la titularidad de forma rápida y sin
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Registro & Transferencias</h3>
+          <p class="text-gray-600 text-sm">Registra tu vehículo o transfiere la titularidad de forma rápida y sin
             complicaciones. Manejamos todos los trámites del DMV.</p>
         </div>
 
         <!-- Service 3: Duplicados -->
         <div class="service-card border border-gray-200 reveal delay-3">
-          <div class="font-montserrat">
-            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-copy"></i></div>
-            <h3 class="text-xl font-bold mb-2 font-montserrat">Duplicados</h3>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-copy text-xl text-jl-orange"></i>
           </div>
-          <p class="text-gray-600 text-sm mb-4">¿Perdiste tu licencia, título o registro? Tramitamos duplicados de
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Duplicados</h3>
+          <p class="text-gray-600 text-sm">¿Perdiste tu licencia, título o registro? Tramitamos duplicados de
             documentos vehiculares de manera eficiente.</p>
         </div>
 
         <!-- Service 4: Seguros Auto -->
         <div class="service-card border border-gray-200 reveal delay-1">
-          <div class="font-montserrat">
-            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-car-side"></i></div>
-            <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros de Auto</h3>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-car-side text-xl text-jl-orange"></i>
           </div>
-          <p class="text-gray-600 text-sm mb-4">Cotizaciones competitivas de seguros de auto en New York. Trabajamos con
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros de Auto</h3>
+          <p class="text-gray-600 text-sm">Cotizaciones competitivas de seguros de auto en New York. Trabajamos con
             las mejores aseguradoras.</p>
-          <span
-            class="inline-block px-3 py-1 text-xs font-bold rounded-full text-white font-montserrat bg-jl-navy">
-          </span>
         </div>
 
         <!-- Service 5: Seguros Hogar -->
         <div class="service-card border border-gray-200 reveal delay-2">
-          <div class="font-montserrat">
-            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-home"></i></div>
-            <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros del Hogar</h3>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-home text-xl text-jl-orange"></i>
           </div>
-          <p class="text-gray-600 text-sm mb-4">Protege tu hogar y todo lo que más quieres. Pólizas para propietarios e
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros del Hogar</h3>
+          <p class="text-gray-600 text-sm">Protege tu hogar y todo lo que más quieres. Pólizas para propietarios e
             inquilinos en New York.</p>
         </div>
 
         <!-- Service 6: Seguros Salud -->
         <div class="service-card border border-gray-200 reveal delay-3">
-          <div class="font-montserrat">
-            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-heart"></i></div>
-            <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros de Salud</h3>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-heart text-xl text-jl-orange"></i>
           </div>
-          <p class="text-gray-600 text-sm mb-4">Planes de salud para individuos y familias. Te ayudamos a encontrar la
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros de Salud</h3>
+          <p class="text-gray-600 text-sm">Planes de salud para individuos y familias. Te ayudamos a encontrar la
             cobertura médica perfecta.</p>
         </div>
-        <!-- CTA Button -->
-        <div class="text-center mt-16 reveal">
-          <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary">
-            <i class="fas fa-arrow-right"></i> Solicitar Información
-          </a>
+
+        <!-- Service 7: Notario -->
+        <div class="service-card border border-gray-200 reveal delay-1">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-stamp text-xl text-jl-orange"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Notario Público</h3>
+          <p class="text-gray-600 text-sm">Servicio notarial profesional para toda clase de documentos legales.
+            Rápido, confiable y al mejor precio.</p>
+        </div>
+
+        <!-- Service 8: Subasta -->
+        <div class="service-card border border-gray-200 reveal delay-2">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-gavel text-xl text-jl-orange"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Subasta de Autos</h3>
+          <p class="text-gray-600 text-sm">Accede a las mejores subastas de autos usados en New York. Te asesoramos
+            para que hagas la mejor compra.</p>
+        </div>
+
+        <!-- Service 9: Curso defensivo -->
+        <div class="service-card border border-gray-200 reveal delay-3">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-jl-orange/10">
+            <i class="fas fa-road text-xl text-jl-orange"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 font-montserrat">Curso Defensivo & Prueba DMV</h3>
+          <p class="text-gray-600 text-sm">Preparación para la prueba de manejo del DMV y curso defensivo certificado.
+            ¡Aprueba a la primera!</p>
         </div>
       </div>
+
+      <!-- CTA Button -->
+      <div class="text-center mt-12 reveal">
+        <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary">
+          <i class="fas fa-arrow-right"></i> Solicitar Información
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO SECTION -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-14 reveal">
+        <p class="text-sm font-bold tracking-widest uppercase mb-3 font-montserrat text-jl-orange">Así de Fácil</p>
+        <h2 class="jl-section-title mb-4">Tu Trámite en 3 Pasos</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Sin filas, sin complicaciones. Te guiamos en cada paso del proceso.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Step 1 -->
+        <div class="text-center reveal delay-1">
+          <div
+            class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-jl-navy text-white text-2xl font-black font-montserrat shadow-lg">
+            1</div>
+          <h3 class="font-bold text-xl font-montserrat mb-2">Contáctanos</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Llámanos, escríbenos por WhatsApp o visítanos en nuestra
+            oficina en Jackson Heights.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="text-center reveal delay-2">
+          <div
+            class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-jl-navy text-white text-2xl font-black font-montserrat shadow-lg">
+            2</div>
+          <h3 class="font-bold text-xl font-montserrat mb-2">Trae tu Documentación</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Te indicamos exactamente qué necesitas. Sin sorpresas ni
+            viajes innecesarios al DMV.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="text-center reveal delay-3">
+          <div
+            class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-jl-orange text-white shadow-lg">
+            <i class="fas fa-check text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-xl font-montserrat mb-2">¡Trámite Listo!</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Gestionamos todo el mismo día. Te vas con tu servicio
+            completo y sin complicaciones.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- STATS SECTION -->
@@ -270,8 +354,8 @@
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="stat-card reveal delay-1">
-          <div class="text-4xl font-black text-jl-orange-light font-montserrat mb-1" data-target="2" data-suffix="+">0+
-          </div>
+          <div class="text-4xl font-black text-jl-orange-light font-montserrat mb-1" data-target="10" data-suffix="+">
+            0+</div>
           <div class="text-white/80 text-sm font-semibold text-center font-montserrat">Años de Experiencia</div>
         </div>
         <div class="stat-card reveal delay-2">
@@ -280,7 +364,7 @@
           <div class="text-white/80 text-sm font-semibold text-center font-montserrat">Clientes Atendidos</div>
         </div>
         <div class="stat-card reveal delay-3">
-          <div class="text-4xl font-black text-jl-orange-light font-montserrat mb-1" data-target="8" data-suffix="">0
+          <div class="text-4xl font-black text-jl-orange-light font-montserrat mb-1" data-target="9" data-suffix="">0
           </div>
           <div class="text-white/80 text-sm font-semibold text-center font-montserrat">Servicios Disponibles</div>
         </div>
@@ -293,17 +377,15 @@
     </div>
   </section>
 
-
   <!-- WHY US SECTION -->
-  <section id="nosotros" class="py-24 bg-jl-cream">
+  <section id="nosotros" class="py-24 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <!-- Left: Image -->
         <div class="relative">
           <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="/Infotablet.jpeg"
-              alt="Equipo de JL Solution trabajando con un cliente" loading="lazy" class="w-full h-96 object-cover">
+            <img src="/Infotablet.jpeg" alt="Equipo de JL Solution trabajando con un cliente" loading="lazy"
+              class="w-full h-96 object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-[#382345]/60 to-transparent"></div>
             <div class="absolute bottom-6 left-6 right-6">
               <div class="text-white font-black text-2xl font-montserrat">Tu Confianza, Nuestra Prioridad</div>
@@ -324,10 +406,11 @@
           </p>
           <h2 class="jl-section-title text-4xl md:text-5xl mb-8">La Diferencia<br>JL Solution</h2>
 
-          <div class="space-y-4">
-            <div class="flex gap-4">
-              <div class="flex-shrink-0">
-                <i class="fas fa-bolt text-2xl text-jl-orange"></i>
+          <div class="space-y-5">
+            <div class="flex gap-4 items-start">
+              <div
+                class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange/10">
+                <i class="fas fa-bolt text-jl-orange"></i>
               </div>
               <div>
                 <h3 class="font-bold text-lg font-montserrat mb-1">Rapidez Garantizada</h3>
@@ -336,9 +419,10 @@
               </div>
             </div>
 
-            <div class="flex gap-4">
-              <div class="flex-shrink-0">
-                <i class="fas fa-users text-2xl text-jl-orange"></i>
+            <div class="flex gap-4 items-start">
+              <div
+                class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange/10">
+                <i class="fas fa-users text-jl-orange"></i>
               </div>
               <div>
                 <h3 class="font-bold text-lg font-montserrat mb-1">Atención Bilingüe</h3>
@@ -347,30 +431,32 @@
               </div>
             </div>
 
-            <div class="flex gap-4">
-              <div class="flex-shrink-0">
-                <i class="fas fa-award text-2xl text-jl-orange"></i>
+            <div class="flex gap-4 items-start">
+              <div
+                class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange/10">
+                <i class="fas fa-award text-jl-orange"></i>
               </div>
               <div>
                 <h3 class="font-bold text-lg font-montserrat mb-1">10+ Años de Experiencia</h3>
-                <p class="text-gray-600 text-sm">Más de una década sirviendo a la comunidad de Corona y toda el área de
-                  New York.</p>
+                <p class="text-gray-600 text-sm">Más de una década sirviendo a la comunidad de Corona y toda el área
+                  de New York.</p>
               </div>
             </div>
 
-            <div class="flex gap-4">
-              <div class="flex-shrink-0">
-                <i class="fas fa-headset text-2xl text-jl-orange"></i>
+            <div class="flex gap-4 items-start">
+              <div
+                class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange/10">
+                <i class="fas fa-headset text-jl-orange"></i>
               </div>
               <div>
                 <h3 class="font-bold text-lg font-montserrat mb-1">Asesoría Personalizada</h3>
-                <p class="text-gray-600 text-sm">Te guiamos en cada paso del proceso, desde el trámite hasta la entrega
-                  final.</p>
+                <p class="text-gray-600 text-sm">Te guiamos en cada paso del proceso, desde el trámite hasta la
+                  entrega final.</p>
               </div>
             </div>
           </div>
 
-          <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary mt-8">
+          <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary mt-8 inline-flex">
             <i class="fas fa-arrow-right"></i> Conoce Más
           </a>
         </div>
@@ -381,7 +467,7 @@
   <!-- TESTIMONIALS SECTION -->
   <section class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 reveal">
         <p class="text-sm font-bold tracking-widest uppercase mb-3 font-montserrat text-jl-orange">
           Lo Que Dicen Nuestros Clientes
         </p>
@@ -390,48 +476,72 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Testimonial 1 -->
-        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50">
-          <div class="flex items-center gap-1 mb-3 text-jl-orange">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50 relative reveal delay-1">
+          <div
+            class="absolute top-4 right-5 text-5xl leading-none font-serif text-jl-orange/15 select-none pointer-events-none">
+            "
           </div>
-          <p class="text-gray-700 mb-4 text-sm leading-relaxed">"Excelente servicio. Llegué a las 10am y a las 11am ya
-            tenía mis placas. Muy recomendado para toda la comunidad latina."</p>
-          <div class="font-bold font-montserrat">María González</div>
-          <div class="text-xs text-gray-500">Corona, Queens</div>
+          <div class="flex items-center gap-1 mb-3 text-jl-orange">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-5 text-sm leading-relaxed italic">"Excelente servicio. Llegué a las 10am y a las
+            11am ya tenía mis placas. Muy recomendado para toda la comunidad latina."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm font-montserrat bg-jl-navy flex-shrink-0">
+              MG</div>
+            <div>
+              <div class="font-bold font-montserrat text-sm">María González</div>
+              <div class="text-xs text-gray-500">Corona, Queens</div>
+            </div>
+          </div>
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50">
-          <div class="flex items-center gap-1 mb-3 text-jl-orange">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50 relative reveal delay-2">
+          <div
+            class="absolute top-4 right-5 text-5xl leading-none font-serif text-jl-orange/15 select-none pointer-events-none">
+            "
           </div>
-          <p class="text-gray-700 mb-4 text-sm leading-relaxed">"Me ayudaron con el seguro de mi auto y del hogar.
-            Precios muy competitivos y el trato fue muy profesional."</p>
-          <div class="font-bold font-montserrat">Carlos Ramírez</div>
-          <div class="text-xs text-gray-500">Jackson Heights, NY</div>
+          <div class="flex items-center gap-1 mb-3 text-jl-orange">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-5 text-sm leading-relaxed italic">"Me ayudaron con el seguro de mi auto y del
+            hogar. Precios muy competitivos y el trato fue muy profesional."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm font-montserrat bg-jl-navy flex-shrink-0">
+              CR</div>
+            <div>
+              <div class="font-bold font-montserrat text-sm">Carlos Ramírez</div>
+              <div class="text-xs text-gray-500">Jackson Heights, NY</div>
+            </div>
+          </div>
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50">
-          <div class="flex items-center gap-1 mb-3 text-jl-orange">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50 relative reveal delay-3">
+          <div
+            class="absolute top-4 right-5 text-5xl leading-none font-serif text-jl-orange/15 select-none pointer-events-none">
+            "
           </div>
-          <p class="text-gray-700 mb-4 text-sm leading-relaxed">"El notario fue muy eficiente y rápido. Todos los
-            documentos quedaron perfectos. Definitivamente volveré."</p>
-          <div class="font-bold font-montserrat">Ana Martínez</div>
-          <div class="text-xs text-gray-500">Flushing, Queens</div>
+          <div class="flex items-center gap-1 mb-3 text-jl-orange">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-5 text-sm leading-relaxed italic">"El notario fue muy eficiente y rápido. Todos
+            los documentos quedaron perfectos. Definitivamente volveré."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm font-montserrat bg-jl-navy flex-shrink-0">
+              AM</div>
+            <div>
+              <div class="font-bold font-montserrat text-sm">Ana Martínez</div>
+              <div class="text-xs text-gray-500">Flushing, Queens</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -455,7 +565,8 @@
           <!-- Contact info cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <!-- Address -->
-            <a href="https://www.google.com/maps/place/95-13+Roosevelt+Ave,+Jackson+Heights,+NY+11372,+EE.+UU./@40.7491889,-73.8719569,19z/data=!3m1!4b1!4m6!3m5!1s0x89c25fb9ff89e857:0x2fba62efdbcbae20!8m2!3d40.7491889!4d-73.8713132!16s%2Fg%2F11bw3zzr7y?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank"
+            <a href="https://www.google.com/maps/place/95-13+Roosevelt+Ave,+Jackson+Heights,+NY+11372,+EE.+UU./@40.7491889,-73.8719569,19z/data=!3m1!4b1!4m6!3m5!1s0x89c25fb9ff89e857:0x2fba62efdbcbae20!8m2!3d40.7491889!4d-73.8713132!16s%2Fg%2F11bw3zzr7y?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
               class="rounded-xl p-4 flex items-start gap-3 transition-all hover:bg-white/10 bg-white/5 border border-white/10">
               <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-jl-orange/20">
                 <i class="fas fa-map-marker-alt text-jl-orange-light"></i>
@@ -463,7 +574,7 @@
               <div>
                 <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">
                   Dirección</div>
-                <div class="text-white text-sm font-medium">95-13 ROOSELVET, NEW YORK </div>
+                <div class="text-white text-sm font-medium">95-13 Roosevelt Ave, NY</div>
               </div>
             </a>
 
@@ -474,8 +585,8 @@
                 <i class="fas fa-phone text-jl-orange-light"></i>
               </div>
               <div>
-                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">Teléfono
-                </div>
+                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">
+                  Teléfono</div>
                 <div class="text-white text-sm font-medium">(929) 240-3566</div>
               </div>
             </a>
@@ -499,9 +610,9 @@
                 <i class="fas fa-clock text-jl-orange-light"></i>
               </div>
               <div>
-                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">Horario
-                </div>
-                <div class="text-white text-sm font-medium">Lunes – Sabado: 10:00am – 19:00pm</div>
+                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">
+                  Horario</div>
+                <div class="text-white text-sm font-medium">Lun – Sáb: 10:00am – 7:00pm</div>
               </div>
             </div>
           </div>
@@ -548,6 +659,7 @@
                   <option value="salud">Seguros de Salud</option>
                   <option value="notario">Notario Público</option>
                   <option value="subastas">Subasta de Autos</option>
+                  <option value="curso">Curso Defensivo & Prueba DMV</option>
                 </select>
               </div>
 
@@ -565,16 +677,17 @@
           </div>
         </div>
 
-        <!-- Right: Quick actions -->
-        <div class="flex flex-col gap-6">
-          <a href="https://www.google.com/maps/place/95-13+Roosevelt+Ave,+Jackson+Heights,+NY+11372,+EE.+UU./@40.7491889,-73.8719569,19z/data=!3m1!4b1!4m6!3m5!1s0x89c25fb9ff89e857:0x2fba62efdbcbae20!8m2!3d40.7491889!4d-73.8713132!16s%2Fg%2F11bw3zzr7y?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank"
+        <!-- Right: Quick actions + Map -->
+        <div class="flex flex-col gap-5">
+          <a href="https://www.google.com/maps/place/95-13+Roosevelt+Ave,+Jackson+Heights,+NY+11372,+EE.+UU./@40.7491889,-73.8719569,19z/data=!3m1!4b1!4m6!3m5!1s0x89c25fb9ff89e857:0x2fba62efdbcbae20!8m2!3d40.7491889!4d-73.8713132!16s%2Fg%2F11bw3zzr7y?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
             class="rounded-xl p-4 flex items-center gap-4 transition-all hover:bg-white/10 bg-white/5 border border-jl-orange/40">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange">
               <i class="fas fa-map-marker-alt text-white text-xl"></i>
             </div>
             <div>
               <div class="text-white font-bold font-montserrat">Cómo Llegar</div>
-              <div class="text-white/70 text-sm">95-13 ROOSELVET, NEW YORK</div>
+              <div class="text-white/70 text-sm">95-13 Roosevelt Ave, Jackson Heights</div>
             </div>
           </a>
 
@@ -591,14 +704,22 @@
 
           <a href="https://wa.me/19292403566" target="_blank"
             class="rounded-xl p-4 flex items-center gap-4 transition-all hover:bg-white/10 bg-white/5 border border-jl-orange/40">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#25D366]">
               <i class="fab fa-whatsapp text-white text-xl"></i>
             </div>
             <div>
               <div class="text-white font-bold font-montserrat">WhatsApp</div>
-              <div class="text-white/70 text-sm">Mensajea Directamente</div>
+              <div class="text-white/70 text-sm">Escríbenos directamente</div>
             </div>
           </a>
+
+          <!-- Google Maps Embed -->
+          <div class="rounded-xl overflow-hidden border border-white/10 flex-1 min-h-48">
+            <iframe
+              src="https://maps.google.com/maps?q=95-13+Roosevelt+Ave+Jackson+Heights+NY+11372&output=embed&hl=es&z=16"
+              width="100%" height="100%" style="border:0;min-height:200px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Ubicación JL Solution"></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -611,15 +732,30 @@
         <!-- Company info -->
         <div>
           <div class="flex items-center gap-2 mb-3">
-            <div class="w-8 h-8 rounded-lg flex items-center justify-center font-black text-white text-sm bg-jl-orange">
+            <div
+              class="w-8 h-8 rounded-lg flex items-center justify-center font-black text-white text-sm bg-jl-orange">
               JL</div>
             <div>
               <div class="text-white font-bold text-sm font-montserrat">JL SOLUTION</div>
-              <div class="text-xs text-white/70">95-13 ROOSELVET, NEW YORK</div>
+              <div class="text-xs text-white/70">95-13 Roosevelt Ave, NY</div>
             </div>
           </div>
-          <p class="text-white/70 text-sm leading-relaxed">Tu solución completa para trámites automotrices, seguros y
-            servicios notariales en New York.</p>
+          <p class="text-white/70 text-sm leading-relaxed mb-4">Tu solución completa para trámites automotrices,
+            seguros y servicios notariales en New York.</p>
+          <div class="flex gap-3">
+            <a href="https://wa.me/19292403566" target="_blank"
+              class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/10 hover:bg-jl-orange transition-colors text-white">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+            <a href="tel:+19292403566"
+              class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/10 hover:bg-jl-orange transition-colors text-white">
+              <i class="fas fa-phone text-sm"></i>
+            </a>
+            <a href="mailto:jeld.solution@gmail.com"
+              class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/10 hover:bg-jl-orange transition-colors text-white">
+              <i class="fas fa-envelope text-sm"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Quick links -->
@@ -643,8 +779,10 @@
           <ul class="space-y-2">
             <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Placas el Mismo Día</a>
             </li>
-            <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Seguros</a></li>
+            <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Seguros de Auto</a></li>
             <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Notario Público</a></li>
+            <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Subasta de Autos</a>
+            </li>
           </ul>
         </div>
 
@@ -658,9 +796,9 @@
             <li><a href="mailto:jeld.solution@gmail.com"
                 class="text-white/70 hover:text-white text-sm transition flex items-center gap-2"><i
                   class="fas fa-envelope text-xs"></i> jeld.solution@gmail.com</a></li>
-            <li><a href="https://www.google.com/maps/place/95-13+Roosevelt+Ave,+Jackson+Heights,+NY+11372,+EE.+UU./@40.7491889,-73.8719569,19z/data=!3m1!4b1!4m6!3m5!1s0x89c25fb9ff89e857:0x2fba62efdbcbae20!8m2!3d40.7491889!4d-73.8713132!16s%2Fg%2F11bw3zzr7y?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank"
-                class="text-white/70 hover:text-white text-sm transition flex items-center gap-2"><i
-                  class="fas fa-map-marker-alt text-xs"></i>95-13 ROOSELVET</a></li>
+            <li><a href="https://www.google.com/maps/place/95-13+Roosevelt+Ave,+Jackson+Heights,+NY+11372,+EE.+UU./@40.7491889,-73.8719569,19z/data=!3m1!4b1!4m6!3m5!1s0x89c25fb9ff89e857:0x2fba62efdbcbae20!8m2!3d40.7491889!4d-73.8713132!16s%2Fg%2F11bw3zzr7y?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" class="text-white/70 hover:text-white text-sm transition flex items-center gap-2"><i
+                  class="fas fa-map-marker-alt text-xs"></i> 95-13 Roosevelt Ave</a></li>
           </ul>
         </div>
       </div>
@@ -677,6 +815,10 @@
       </div>
     </div>
   </footer>
+
+  <!-- React entry point — needed for Tailwind CSS compilation -->
+  <div id="root" style="display:none;position:absolute;pointer-events:none;"></div>
+  <script type="module" src="/src/main.tsx"></script>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/19292403566?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20sus%20servicios"
@@ -703,7 +845,6 @@
       if (!twDeleting) {
         twEl.textContent = word.slice(0, ++twChar);
         if (twChar === word.length) {
-          // Pausa al final antes de borrar
           setTimeout(() => { twDeleting = true; requestAnimationFrame(typewriterLoop); }, 1800);
           return;
         }
@@ -730,23 +871,19 @@
     requestAnimationFrame(typewriterLoop);
     // ──────────────────────────────────────────────────────────────────
 
-    // Smooth scroll
     function smoothScroll(e, target) {
       e.preventDefault();
       const element = document.querySelector(target);
       if (element) {
-        // Cierra el menú móvil si está abierto
         const mobileMenu = document.getElementById('mobileMenu');
         if (!mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
           mobileMenu.classList.remove('flex');
         }
-
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
 
-    // Navbar scroll effect
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 60) {
@@ -756,7 +893,6 @@
       }
     });
 
-    // Mobile menu toggle
     document.getElementById('mobileMenuBtn').addEventListener('click', () => {
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('hidden');
@@ -767,7 +903,6 @@
       }
     });
 
-    // Form submission — intenta el servidor, si falla redirige a WhatsApp
     async function handleFormSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('[type="submit"]');
@@ -796,7 +931,6 @@
           signal: controller.signal
         });
         clearTimeout(timeoutId);
-
         if (response.ok) {
           showFormSuccess();
           window.open(waUrl, '_blank');
@@ -805,7 +939,6 @@
           throw new Error('server error');
         }
       } catch (error) {
-        // Si no hay servidor corriendo, redirigir directo a WhatsApp
         showFormSuccess();
         window.open(waUrl, '_blank');
         document.getElementById('contactForm').reset();
@@ -823,7 +956,6 @@
       setTimeout(() => msg.remove(), 4500);
     }
 
-    // Scroll Reveal con Intersection Observer
     const revealEls = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -835,7 +967,6 @@
     }, { threshold: 0.12 });
     revealEls.forEach(el => revealObserver.observe(el));
 
-    // Counter animation
     function animateCounter(el) {
       const target = parseInt(el.dataset.target);
       const duration = 1800;

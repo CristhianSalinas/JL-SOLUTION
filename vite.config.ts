@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -12,8 +13,13 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist/public",
+    outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name][extname]',
+      },
+    },
   },
   server: {
     allowedHosts: ["savoriest-journee-feverously.ngrok-free.dev"],
